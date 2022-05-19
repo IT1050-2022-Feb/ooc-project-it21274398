@@ -1,5 +1,5 @@
 #include "User.h"
-#include "Registered_User.h"
+#include "Registered_user.h"
 #include "guestUser.h"
 #include "user_account.h"
 #include "Services.h"
@@ -10,9 +10,12 @@
 #include "items.h"
 #include "Order.h"
 #include "Report.h"
+
 #include<cstring>
 #include <iostream>
+
 using namespace std;
+
 int main()
 {
  //---- Creating Objects ------
@@ -23,13 +26,13 @@ int main()
  	Services* services = new Services(); // Object - Services class
  	Project* project = new Project(); // Object - Project class
  	Payment* payment = new Payment(); // Object - Payment class
- 	Employee* employee = new Employee(); // Object â€“ Employee class
+ 	Employee* employee = new Employee(); // Object - Employee class
 	items* Item = new items(); // Object - items class
 	Order* order = new Order(); // Object - Order class
 	Report* report = new Report(); // Object - Report class
 	Supplier* supplier = new Supplier(); // Object - Supplier class
 
- //----Calling Methods------
+ //----------------Calling Methods-------------------------
 
  	registeredUser->displayUserDetails();
  	registeredUser->searchServices();
@@ -39,7 +42,7 @@ int main()
 	Guest_User ->RegisterUser();
  	services->displayServiceDetails();
 	services->setDescription();
-        services->setServiceName();
+    services->setServiceName();
 	services->setService();
  	project->displayProjectDetails();
 	project->updateProjectDetails();
@@ -56,14 +59,15 @@ int main()
 	order->addRawMaterials();
 	order->displayMaterialDetails();
 	supplier->displaySupplierDetails();
- 	item->setCheckStockStatus();
-	item->addStock();
-	item->deleteStock();
- 	item->setUpdateStock();
+ 	Item->setCheckStockStatus();
+	Item->addStock();
+	Item->deleteStock();
+ 	Item->setUpdateStock();
 	report->storeReportDetails();
 	report->displayReportDetails();
  	
- //----Delete Dynamic objects------
+ //-----------------------Delete Dynamic objects---------------------------------
+ 
  delete registeredUser;
  delete services;
  delete project;
@@ -72,7 +76,10 @@ int main()
  delete employee;
  delete order;
  delete supplier;
- delete item;
+ delete Item;
  delete report;
  delete Guest_User;
- return 0;}
+ return 0;
+ }
+
+
